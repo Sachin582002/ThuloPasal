@@ -138,7 +138,7 @@ const ProductDetails = () => {
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="grid md:grid-cols-2 justify-between min-h-[80vh] items-center">
           <img
-            src={product?.url ?? iphone}
+            src={product?.imageurls[0] ?? iphone}
             alt=""
             className="w-auto max-h-[80vh]"
           />

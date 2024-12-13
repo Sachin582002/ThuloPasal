@@ -32,7 +32,9 @@ const getCategories = async () => {
 };
 
 const addProduct = async (data) => {
-  const response = await axios.post(`${config.baseApiUrl}/api/products`, data, {
+  const response = await axios.post(`${config.baseApiUrl}/api/products`,
+    {...data, imageUrls:[data.url]},
+      {
     headers: {
       Authorization: `Bearer ${authToken}`,
     },
@@ -44,7 +46,7 @@ const addProduct = async (data) => {
 const editProduct = async (id, data) => {
   const response = await axios.put(
     `${config.baseApiUrl}/api/products/${id}`,
-    data,
+    {...data, imageUrls:[data.url]},
     {
       headers: {
         Authorization: `Bearer ${authToken}`,

@@ -91,6 +91,8 @@ const ProductList = () => {
                   id={product._id}
                   setSelectedProductId={setSelectedProductId}
                   setIsOpen={setIsOpen}
+                  isEditable={true}
+                  url={product.imageUrls}
                   {...product}
                 />
               ))}
